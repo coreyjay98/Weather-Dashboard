@@ -1,0 +1,135 @@
+.container {
+  margin-top: 36px;
+  border: 1px solid black;
+  background-color: lightgrey;
+  margin-bottom: 100px;
+  position: relative;
+}
+.row {
+  background-color: #b8b8b8;
+}
+header {
+  text-align: center;
+  font-size: 36px;
+  color: white;
+  background-color: grey;
+}
+.headerRow {
+  background-color: grey;
+  border-bottom: black solid 1px;
+}
+.searchDiv {
+  background-color: #f0f8ff;
+  padding: 20px;
+  background-color: #b8b8b8;
+}
+.searchForm {
+  padding: 10px;
+  margin-left: -20px;
+}
+.citySearch {
+  width: 100%;
+}
+.col-md-9 {
+  background-color: darkred;
+}
+
+.searchHistory {
+  border: solid 1px black;
+  margin-top: 30px;
+  background-color: #e9e9e9;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.displayTiles {
+  padding: 20px;
+  margin: 0px;
+  height: 100%;
+  background-color: #e9e9e9;
+  border-left: black solid 1px;
+}
+
+.greenUV {
+  background-color: greenyellow;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px darkgreen;
+  height: 60px;
+}
+.orangeUV {
+  background-color: orange;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px orangered;
+  height: 60px;
+}
+.redUV {
+  background-color: red;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px darkred;
+  height: 60px;
+}
+
+.currentHead {
+  margin-top: 0;
+}
+li {
+  margin: 10px;
+  font-size: 24px;
+}
+
+.fiveForecast {
+  padding: 10px;
+  width: 100%;
+  margin: -20px;
+}
+
+h6 {
+  white-space: normal;
+}
+.coreyCard {
+  background-color: blue;
+  margin-top: 10px;
+  margin-right: 14px;
+  display: inline-block;
+  border: black solid 2px;
+  border-radius: 10px;
+  color: white;
+}
+.cardDate {
+  color: white;
+  margin: 10px;
+}
+.cardTemp {
+  color: white;
+  font-size: 16px;
+  display: block;
+  margin: 10px;
+  margin-top: 30px;
+}
+.cardHumidity {
+  color: white;
+  font-size: 14px;
+  display: block;
+  margin: 10px;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+.tempHead {
+  display: inherit;
+}
+
+.hide {
+  display: none;
+}
+.searchHistory {
+  margin-top: 0;
+}

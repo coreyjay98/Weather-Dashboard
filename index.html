@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container rounded">
+    <div class="row headerRow">
+      <header class="col-md-12">Weather Dashboard</header>
+    </div>
+
+    <div class="row">
+      <!-- Search Bar Column-->
+      <div class="col-md-3 searchDiv">
+        <form class='searchForm' action="submit">
+          <h5>Search For City Here</h5>
+          <input type="text" class="citySearch">
+          <button class="searchButton fas fa-search fa-xs"></button>
+        </form>
+        <div class="historyContainer">
+
+        </div>
+      </div>
+      <!-- Current Weather Display-->
+      <div class="col-md-9">
+        <div class=" row displayTiles">
+          <h1 class="currentHead"></h1>
+          <ul class="displayList">
+          </ul>
+          <h2 class="UVindexList"></h2>
+          <!-- Five Day Forecast -->
+          <div class="fiveForecast">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
