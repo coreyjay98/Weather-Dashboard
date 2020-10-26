@@ -60,8 +60,10 @@ function onSearchClick() {
       UVindexDisplay(UVindex);
     });
   }
+  if ($(".citySearch").val() !== historyArray) {
+    historyArray.push(cityQuery);
+  }
   $(".citySearch").val("");
-  historyArray.push(cityQuery);
 }
 searchForm.submit(function (event) {
   event.preventDefault();
@@ -104,12 +106,10 @@ function currentDisplay(response) {
 }
 
 function historyButtons() {
-  for (let selector = 0; selector < historyArray.length; selector++) {
-    let searchHistoryButton =
-      "<button class='searchHistory'>" + historyArray[selector] + "</button>";
-    $(".historyContainer").append(searchHistoryButton);
-    console.log("button");
-  }
+  const lastButton = historyArray[historyArray.length - 1];
+  let searchHistoryButton =
+    "<button class='searchHistory'>" + lastButton + "</button>";
+  $(".historyContainer").append(searchHistoryButton);
 }
 
 function fiveDayDisplay(fiveDay) {
@@ -149,19 +149,11 @@ function fiveDayDisplay(fiveDay) {
 const searchHistorySubmission = $(".searchHistory");
 
 $(".historyContainer").on("click", function () {
-  clearDisplayButton(event);
+  clearDisplay(event);
   const lastItem = historyArray[historyArray.length - 1];
   if ($(".searchHistory").text().includes(lastItem)) {
-    console.log("first array", historyArray);
-    console.log(lastItem);
     $(".citySearch").val(lastItem);
     onSearchClick();
-  } else {
-    console.log("second array", historyArray);
-    $(".citySearch").val(lastItem);
-    console.log(lastItem);
-    onSearchClick();
-    historyButtons();
   }
 });
 
@@ -176,8 +168,7 @@ function clearDisplayButton(event) {
   $(".UVindexList").empty();
   $(".citySearch").val("");
 }
-/* $(".citySearch").val($(".searchHistory").text().trim());
-console.log($(".citySearch").val()); */
+/*console.log($(".citySearch").val()); */
 
 /* if ($(this).hasClass("searchHistory")) {
   console.log($(".citySearch").val($(this).text().trim()));
