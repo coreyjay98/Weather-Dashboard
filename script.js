@@ -8,6 +8,7 @@ console.log("city name", citySearchStorage); */
 } */
 
 const historyArray = [];
+const realArray = [];
 
 function onSearchClick() {
   clearDisplay();
@@ -48,7 +49,7 @@ function onSearchClick() {
     const cityLat = response.coord.lat.toString();
     const cityLon = response.coord.lon.toString();
     const UVindexURL =
-      "http://api.openweathermap.org/data/2.5/uvi?lat=" +
+      "https://api.openweathermap.org/data/2.5/uvi?lat=" +
       cityLat +
       "&lon=" +
       cityLon +
@@ -65,6 +66,11 @@ function onSearchClick() {
   }
   $(".citySearch").val("");
 }
+
+/* for (let i = 0; i < historyArray.length; i++) {
+          if (realArray.indexOf(historyArray[i]) === -1) {
+            realArray.push(historyArray[i]);
+          } */
 searchForm.submit(function (event) {
   event.preventDefault();
   onSearchClick();
@@ -154,6 +160,8 @@ $(".historyContainer").on("click", function () {
   if ($(".searchHistory").text().includes(lastItem)) {
     $(".citySearch").val(lastItem);
     onSearchClick();
+  } else {
+    console.log("hi");
   }
 });
 
